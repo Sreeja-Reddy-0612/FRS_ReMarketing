@@ -77,7 +77,7 @@ Sellers can easily list items by:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/smart-exchange-platform.git
+git clone https://github.com/Sreeja-Reddy-0612/FRS_ReMarketing.git
 
 # Navigate to the project directory
 cd smart-exchange-platform
