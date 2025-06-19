@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unused Items Exchange</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+}
+header {
+background-color: #2874f0;
+color: white;
+padding: 5px 50px; /* Space on left and right */
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.logo img {
+height: 50px;
+}
+h3 {
+margin: 0;
+flex-grow: 1; /* Allow header title to grow */
+text-align: left; /* Align text to the left */
+}
+.search-bar {
+padding: 8px;
+width: 600px; /* Set a fixed width for the search bar */
+height: 35px; /* Set height for search bar */
+margin-left: -150px; /* Move search bar slightly to the left */
+}
+nav {
+display: flex; /* Use flexbox for navigation items */
+}
+nav ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display: flex; /* Align items in one line */
+}
+nav ul li {
+display: inline-flex; /* Use inline-flex for better alignment */
+align-items: center; /* Center items vertically */
+margin-left: 15px;
+}
+nav ul li a {
+color: white;
+text-decoration: none;
+font-size: 18px; /* Increased font size for navigation links */
+}
+nav ul li a img {
+padding-right: 5px;
+}
+.cart-icon {
+display: flex;
+align-items: center;
+}
+.cart-icon img {
+height: 20px;
+margin-left: 5px;
+}
+
+/* User options styles */
+.user-options {
+display: none; /* Initially hidden */
+position: absolute; /* Position it relative to header */
+right: 30px; /* Align it to the right */
+background-color: white; /* Background for dropdown */
+box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Shadow effect */
+z-index: 100; /* Ensure it appears above other elements */
+}
+.user-options p {
+margin: 10px; /* Margin for options */
+cursor: pointer; /* Pointer cursor for clickable items */
+}
+.user-options p:hover {
+background-color: #f1f1f1; /* Highlight on hover */
+}
+
+.slider {
+position: relative; /* Position relative for absolute children */
+overflow: hidden; /* Hide overflow */
+width: calc(100% - 60px); /* Full width minus space for left/right margins */
+height: 550px; /* Increased height for the slider */
+margin-top: 10px; /* Space above the slider */
+margin-left: 50px; /* Add left margin for spacing */
+margin-right: 50px; /* Add right margin for spacing */
+}
+.slides {
+display: flex; /* Flexbox to arrange slides in a row */
+transition: transform 0.5s ease-in-out; /* Smooth transition */
+width: 100%; /* Full width of the slider */
+}
+.slide {
+min-width: 100%; /* Each slide takes full width of the slider */
+height: auto; /* Maintain aspect ratio */
+}
+.categories {
+display: flex;
+justify-content: space-around;
+padding: 10px 0;
+}
+.category {
+background-color: white;
+border-radius: 5px; 
+text-align: center; 
+width: 150px; 
+}
+.category img {
+width: 100%;
+border-radius: 5px 5px 0 0; 
+}
+footer {
+text-align: center; 
+padding: 10px 0; 
+background-color: #f1f1f1; 
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">
+<img src="icon.png" alt="Website Icon">
+</div>
+<h3>Unused Items Exchange</h3>
+<input type="text" placeholder="Search items..." class="search-bar">
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="signup.html">Signup</a></li>
+<li><img src="login-removebg.png" alt="Profile Icon" width="30" height="30"><a href="login.html">Login</a></li>
+<li><img src="saleee-removebg-preview.png" alt="Sales Icon" width="20" height="24"><a href="#sales">Sales</a></li>
+<li class="cart-icon"><img src="cart-removebg-preview.png" alt="Cart Icon" width="30" height="30"><a href="#cart">Cart</a></li>
+</ul>
+</nav>
+<div id="userGreeting"></div> 
+<div class='user-options' id='userOptions'>
+<p id='addressOption'>Address</p>
+<p id='phoneOption'>Phone Number</p>
+<p id='logoutOption'>Logout</p>
+</div> 
+</header>
+
+<script>
+// Display user name if available
+const userName = localStorage.getItem('userName');
+if (userName) {
+document.getElementById('userGreeting').innerText =  ${userName};
+}
+
+// Show/hide user options on click
+document.getElementById('userGreeting').onclick = function() {
+const options = document.getElementById('userOptions');
+options.style.display = options.style.display === 'block' ? 'none' : 'block';
+};
+
+// Logout functionality
+document.getElementById('logoutOption').onclick = function() {
+localStorage.removeItem('userName'); // Remove user name from local storage
+document.getElementById('userGreeting').innerText = ''; // Clear greeting
+alert('You have logged out successfully!');
+};
+</script>
+
+<main>
+<!-- Categories Section -->
+<div class="categories">
+<div class="category">
+<img src="clothslider.jpg" alt="Clothes" width="80" height="80">
+<p><a href="clothes.html" style="text-decoration: none; color: inherit;">Clothes</a></p>
+</div>
+<div class="category">
+<img src="boo.jpg" alt="Books" width="80" height="80">
+<p><a href="book.html" style="text-decoration: none; color: inherit;">Books</a></p>
+</div>
+<div class="category">
+<img src="jewel.jpg" alt="Jewelry" width="80" height="80">
+<p><a href="jewel.html" style="text-decoration: none; color: inherit;">Jewellery</a></p>
+</div>
+<div class="category">
+<img src="electronic.jpg" alt="Electronic" width="80" height="80">
+<p>Electronic</p>
+</div>
+<div class="category">
+<img src="laptop.jpg" alt="Mobile & Laptop" width="80" height="80">
+<p><a href="laptop.html" style="text-decoration: none; color: inherit;">Mobile & laptop</a></p>
+</div>
+<div class="category">
+<img src="food.jpg" alt="Food" width="80" height="80">
+<p><a href="Food.html" style="text-decoration: none; color: inherit;">Food</a></p>
+
+</div>
+<div class="category">
+<img src="bikecar.jpg" alt="Emergency" width="80" height="80">
+<p><a href="bikecar.html" style="text-decoration: none; color: inherit;">Bike & Car</a></p>
+</div>
+<div class="category">
+<img src="beauty.jpg" alt="Beauty" width="80" height="80">
+
+          <p><a href="beauty.html" style="text-decoration: none; color: inherit;">Beauty</a></p>
+
+</div>
+<div class="category">
+<img src="emerge.jpg" alt="Emergency" width="80" height="80">
+<p><a href="emergency.html" style="text-decoration: none; color: inherit;">Emergency</a></p>
+</div>
+</div>
+
+<!-- Promotional Slider -->
+<!-- Optional header for promotional slider can be uncommented -->
+<!--
+<h2>Promotional Slider</h2> 
+-->
+<div class="slider">
+<div class="slides">
+<!-- Slider Images -->
+<img src="foodextra.jpg" alt="Slider Image 1" class="slide">
+<img src="boyyy.jpg" alt ="Slider Image 2" class ="slide">
+<img src ="gadgets.jpg" alt="Slider Image4" class= "slide ">
+<img src ="clothslider.jpg "alt ="Slider Image5 "class ="slide ">
+<img src ="pep.jpg "alt ="Slider Image3 "class ="slide ">
+</div >
+</div >
+
+</main>
+
+<footer >
+<p>&copy ;2025 Unused Items Exchange. All rights reserved.</ p >
+</footer >
+
+<script >
+// JavaScript for sliding images
+let currentSlide = 0;
+
+// Function to show the next slide
+function showNextSlide() {
+const slides = document.querySelector('.slides');
+const totalSlides = document.querySelectorAll('.slide').length;
+
+currentSlide = (currentSlide + 1) % totalSlides; // Loop back to first slide
+slides.style.transform = translateX(-${currentSlide * 100}%); // Move slides
+}
+
+// Change slide every one and a half seconds (1500 milliseconds)
+setInterval(showNextSlide, 1500);
+</script >
+
+</body >
+</html >

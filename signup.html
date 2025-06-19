@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Create Account</h2>
+    <form id="signupForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="phone" placeholder="Phone Number" required>
+        <input type="email" id="email" placeholder="Email ID" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <input type="text" id="pincode" placeholder="Pincode" required>
+        <input type="text" id="city" placeholder="City" required>
+        <input type="text" id="state" placeholder="State" required>
+        <input type="text" id="locality" placeholder="Locality" required>
+
+        <!-- Button to create profile -->
+        <button type="submit">Sign Up</button>  
+    </form>  
+</div>
+
+<script>
+// JavaScript for signup functionality
+document.getElementById("signupForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const address = document.getElementById("address").value;
+    const pincode = document.getElementById("pincode").value;
+    const city = document.getElementById("city").value;
+    const state = document.getElementById("state").value;
+    const locality = document.getElementById("locality").value;
+
+    // Here you would typically send this data to your backend server
+    console.log({ name, phone, email, password, address, pincode, city, state, locality });
+    
+    // Alert for demonstration purposes
+    alert("Account created successfully!");
+
+    // Store user name in local storage (for demonstration)
+    localStorage.setItem('userName', name); // Store name for later use
+    
+    // Redirect to home page
+    window.location.href = 'index.html'; // Redirect to home page after signup
+});
+</script>
+
+</body>
+</html>

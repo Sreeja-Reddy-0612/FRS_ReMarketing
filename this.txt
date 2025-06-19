@@ -1,0 +1,661 @@
+<header>
+    <div class="logo">
+        <img src="icon.png" alt="Website Icon">
+    </div>
+    <h3>Unused Items Exchange</h3>
+    <input type="text" placeholder="Search items..." class="search-bar">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signup/login.html">Signup/Login</a></li>
+            <li><a href="sales.html">Sales</a></li>
+            <li class="cart-icon">
+                <a href="#cart">Cart</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+header {
+    background-color: #6a1b9a;  /* Deep Purple */
+    color: white;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h3 {
+    font-size: 24px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+.search-bar {
+    padding: 10px 15px;
+    width: 450px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #6a1b9a;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #f1f1f1;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.cart-icon img {
+    height: 30px;
+    margin-left: 10px;
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unused Items Exchange</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: purple;
+            color: white;
+            padding: 5px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo img {
+            height: 50px;
+        }
+        h3 {
+            margin: 0;
+            flex-grow: 1;
+            text-align: left;
+        }
+        .search-bar {
+            padding: 8px;
+            width: 600px;
+            height: 35px;
+            margin-left: -150px;
+        }
+        .cart-icon img {
+            height: 20px;
+            margin-left: 5px;
+        }
+        nav {
+            display: flex;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            display: inline-flex;
+            align-items: center;
+            margin-left: 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav ul li a img {
+            padding-right: 5px;
+        }
+        .user-options {
+            display: none;
+            position: absolute;
+            right: 30px;
+            background-color: black;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        .user-options p {
+            margin: 10px;
+            cursor: pointer;
+            background-color:black;
+            padding-top: 20px;
+
+        }
+        .user-options p:hover {
+            background-color:black;
+            
+        }
+        .slider {
+            position: relative;
+            overflow: hidden;
+            width: calc(100% - 60px);
+            height: 550px;
+            margin-top: 10px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        .slide {
+            min-width: 100%;
+            height: auto;
+        }
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .category {
+            background-color: white;
+            border-radius: 5px;
+            text-align: center;
+            width: 150px;
+        }
+        .category img {
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+        }
+        .user-greeting {
+    background-color: lightpurple;  /* Light purple background for the user info */
+    color: white;  /* White text color */
+    padding: 10px;
+    margin-top: 10px;  /* Ensure it's spaced out from the previous section */
+    text-align: left;
+}
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f1f1f1;
+        }
+
+
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #6a1b9a;  /* Deep Purple */
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h3 {
+    font-size: 24px;
+    flex-grow: 1;
+    text-align: left;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+.search-bar {
+    padding: 10px 15px;
+    width: 400px;
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #6a1b9a;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #f1f1f1;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.cart-icon img {
+    height: 30px;
+    margin-left: 10px;
+}
+
+.user-greeting {
+    display: none;
+    background-color: #ab47bc;  /* Light Purple */
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+
+.category {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 170px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category:hover {
+    transform: translateY(-10px);
+}
+
+.category img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.category p {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.category a {
+    text-decoration: none;
+    color: #6a1b9a;
+    font-size: 16px;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.category a:hover {
+    color: #d32f2f;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .search-bar {
+        width: 80%;
+        margin-top: 15px;
+    }
+
+    .categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+@keyframes slideAnimation {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.user-greeting {
+    animation: slideAnimation 0.5s ease-out;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="icon.png" alt="Website Icon">
+    </div>
+    <h3>Unused Items Exchange</h3>
+    <input type="text" placeholder="Search items..." class="search-bar">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><img src="login-removebg.png" alt="Profile Icon" width="30" height="30"><a href="login.html">Login</a></li>
+            <li><img src="saleee-removebg-preview.png" alt="Sales Icon" width="20" height="24"><a href="sales.html">Sales</a></li>
+            <li class="cart-icon"><img src="cart-removebg-preview.png" alt="Cart Icon" width="30" height="30"><a href="#cart">Cart</a></li>
+        </ul>
+    </nav>
+    <!-- <div id="userGreeting"></div>
+    <div class='user-options' id='userOptions'>
+        <p id='phoneOption'>Phone Number:</p>
+        <p id='emailOption'>Logout</p>
+       
+        <p id='logoutOption'>Logout </p>
+    </div> -->
+
+<!-- User Greeting Section (insert this below the "Sort By" dropdown) -->
+<div class="user-greeting" id="userGreeting" style="display: none; background-color: lightpurple; color: white; padding: 10px; margin-top: 10px; text-align: left;">
+    <p><strong>Hello, <span id="userNameText"></span></strong></p>
+    <p>Phone: <span id="userPhoneText"></span></p>
+    <p>Email: <span id="userEmailText"></span></p>
+</div>
+
+
+    <!-- <div class="right">
+        <label for="sort">Sort By:</label>
+        <select id="sort">
+            <option value="date">Last Date</option>
+            <option value="alphabet">Alphabet</option>
+            <option value="amount">Amount</option>
+        </select>
+    </div> -->
+</header>
+
+<script>
+// Display user name if available
+const userName = localStorage.getItem('userName');
+const phoneNumber = localStorage.getItem('userPhone');
+const email = localStorage.getItem('userEmail');
+
+
+
+// Show/hide user options on click
+if (userName && phoneNumber && email) {
+    // Display the user greeting
+    document.getElementById('userGreeting').style.display = 'block';  // Make the greeting visible
+    document.getElementById('userNameText').innerText = userName;
+    document.getElementById('userPhoneText').innerText = phoneNumber;
+    document.getElementById('userEmailText').innerText = email;
+}
+
+// Logout functionality
+document.getElementById('logoutOption').onclick = function() {
+   localStorage.removeItem('userName');
+   localStorage.removeItem('userPhone');
+   localStorage.removeItem('userEmail');
+   document.getElementById('userGreeting').innerText = '';
+   alert('You have logged out successfully!');
+};
+
+// Promotional slider functionality
+let currentSlide = 0;
+
+// Function to show the next slide
+function showNextSlide() {
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    currentSlide = (currentSlide + 1) % totalSlides;
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`; 
+}
+
+// Change slide every one and a half seconds (1500 milliseconds)
+setInterval(showNextSlide, 1500);
+</script>
+
+<main>
+    <!-- Categories Section -->
+    <div class="categories">
+        <div class="category">
+            <img src="clothslider.jpg" alt="Clothes" width="80" height="80">
+            <p><a href="clothes.html" style="text-decoration: none; color: inherit;">Clothes</a></p>
+        </div>
+        <div class="category">
+            <img src="boo.jpg" alt="Books" width="80" height="80">
+            <p><a href="book.html" style="text-decoration: none; color: inherit;">Books</a></p>
+        </div>
+        <div class="category">
+            <img src="jewel.jpg" alt="Jewelry" width="80" height="80">
+            <p><a href="jewel.html" style="text-decoration: none; color: inherit;">Jewellery</a></p>
+        </div>
+        <div class="category">
+            <img src="electronic.jpg" alt="Electronic" width="80" height="80">
+            <p><a href="electronic.html" style="text-decoration: none; color: inherit;">Electronic</a></p>
+        </div>
+        <div class="category">
+            <img src="laptop.jpg" alt="Mobile & Laptop" width="80" height="80">
+            <p><a href="laptop.html" style="text-decoration: none; color: inherit;">Mobile & laptop</a></p>
+        </div>
+        <div class="category">
+            <img src="food.jpg" alt="Food" width="80" height="80">
+            <p><a href="Food.html" style="text-decoration: none; color: inherit;">Food</a></p>
+        </div>
+        <div class="category">
+            <img src="bikecar.jpg" alt="Emergency" width="80" height="80">
+            <p><a href="bikecar.html" style="text-decoration: none; color: inherit;">Bike & Car</a></p>
+        </div>
+        <div class="category">
+            <img src="beauty.jpg" alt="Beauty" width="80" height="80">
+            <p><a href="beauty.html" style="text-decoration: none; color: inherit;">Beauty</a></p>
+        </div>
+        <div class="category">
+            <img src="emerge.jpg" alt="Emergency" width="80" height="80">
+            <p><a href="emergency.html" style="text-decoration: none; color: inherit;">Emergency</a></p>
+        </div>
+    </div>
+
+    <!-- Promotional Slider -->
+    <div class="slider">
+        <div class="slides">
+            <img src="foodextra.jpg" alt="Slider Image 1" class="slide">
+            <img src="boyyy.jpg" alt="Slider Image 2" class="slide">
+            <img src="gadgets.jpg" alt="Slider Image 3" class="slide">
+            <img src="clothslider.jpg" alt="Slider Image 4" class="slide">
+            <img src="pep.jpg" alt="Slider Image 5" class="slide">
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Unused Items Exchange. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+Certainly! Here’s a more professional version of your description:
+
+---
+
+### Platform Overview:
+
+1. **Login & Access**:  
+   Users can securely log in to the platform using their credentials. Once logged in, users can search for products or browse various categories to find items of interest.
+
+2. **Product Listings**:  
+   Each product listing will include the following details:  
+   - **Product Name**  
+   - **Delivery Method**  
+   - **Rating**  
+   - **Communication Options** (Message & Call)  
+
+3. **Add a Product**:  
+   If users wish to sell an item, they can easily list it by:  
+   - Clicking the "+" icon to add a new product.  
+   - Entering product name, price, and uploading an image.
+
+---
+
+### Key Advantages:
+
+1. **Monetary Benefits**:  
+   The platform allows users to earn money by selling unused items they no longer need.
+
+2. **Retain or Share Items**:  
+   Users have the flexibility to either retain items for personal use or give them away to others in need.
+
+3. **Discover New Items**:  
+   The platform offers sorting options, enabling users to easily find new or useful items based on their preferences.
+
+---
+
+### Why Use This Platform:
+
+1. **Donate Unused Items**:  
+   Users can offer unused items for free, contributing to sustainability and helping others.
+
+2. **Future Utility of Unused Items**:  
+   Items that may no longer be useful today could potentially be useful in the future. This platform allows users to store or reallocate items as needed.
+
+3. **Sell Unused Items**:  
+   Users can monetize items that are no longer being used, such as gently used household goods, electronics, and more.
+
+---
+
+### Filters & Additional Features:
+
+1. **Delivery Management**:  
+   Users can select delivery options, including choosing a designated delivery person.
+
+2. **Chatbot Integration**:  
+   A chatbot is available to assist users with inquiries, ensuring a seamless and responsive experience.
+
+3. **Enhanced Security**:  
+   The platform prioritizes user security, offering robust measures to protect personal information and transactions.
+
+---
+
+This professional format outlines the process and benefits of using the platform, highlighting key features and ensuring clarity for users. Let me know if you need further adjustments!

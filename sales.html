@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unused Items - Sales</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .left, .right {
+            width: 20%;
+        }
+        .middle {
+            width: 50%;
+        }
+        .middle input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .right select {
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .item {
+            width: 30%;
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .item img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+        }
+        .item h4 {
+            margin: 10px 0;
+        }
+        .item p {
+            color: #666;
+        }
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Unused Items</h1>
+</header>
+
+<div class="container">
+    <div class="left">
+        <h3>Unused Items</h3>
+    </div>
+    <div class="middle">
+        <input type="text" placeholder="Search items...">
+    </div>
+    <div class="right">
+        <label for="sort">Sort By:</label>
+        <select id="sort">
+            <option value="date">Last Date</option>
+            <option value="alphabet">Alphabet</option>
+            <option value="amount">Amount</option>
+        </select>
+    </div>
+</div>
+
+<div class="items">
+    <div class="item">
+        <img src="sbike.jpg" alt="Bike" width="50px">
+        <h4>Bike (Rent)</h4>
+        <p>Mode: Rent</p>
+        <p>Rent: $30/day</p>
+        <p>Location: 123 Street, City</p>
+        <p>Well-maintained bike, ideal for short trips.</p>
+    </div>
+    <div class="item">
+        <img src="skurt.jpg" alt="Kurthi">
+        <h4>Kurthi (Sell)</h4>
+        <p>Mode: Sell</p>
+        <p>Price: $25</p>
+        <p>Location: 456 Avenue, City</p>
+        <p>Brand new Kurthi, comfortable and stylish.</p>
+    </div>
+    <div class="item">
+        <img src="so+ve.jpg" alt="O+ve Blood">
+        <h4>O+ve Blood (Free)</h4>
+        <p>Mode: Free</p>
+        <p>Location: Blood Bank, City</p>
+        <p>Donate O+ve blood for those in need.</p>
+    </div>
+    <div class="item">
+        <img src="stable.jpg" alt="Furniture">
+        <h4>Furniture (Sell)</h4>
+        <p>Mode: Sell</p>
+        <p>Price: $150</p>
+        <p>Location: 789 Road, City</p>
+        <p>Old wooden furniture in good condition.</p>
+    </div>
+    <div class="item">
+        <img src="sbookml.jpg" alt="Books">
+        <h4>Books (Sell)</h4>
+        <p>Mode: Sell</p>
+        <p>Price: $5/book</p>
+        <p>Location: 101 Park, City</p>
+        <p>Various books in excellent condition, ideal for reading.</p>
+    </div>
+    <div class="item">
+        <img src="laptop.jpg" alt="Laptop">
+        <h4>Laptop (Sell)</h4>
+        <p>Mode: Sell</p>
+        <p>Price: $500</p>
+        <p>Location: 112 Lane, City</p>
+        <p>Used laptop, still works perfectly fine.</p>
+    </div>
+    <div class="item">
+        <img src="scam.jpg" alt="Camera">
+        <h4>Camera (Rent)</h4>
+        <p>Mode: Rent</p>
+        <p>Rent: $20/day</p>
+        <p>Location: 124 Street, City</p>
+        <p>Camera for rent, suitable for outdoor shoots.</p>
+    </div>
+    <div class="item">
+        <img src="smicro.jpg" alt="Microwave">
+        <h4>Microwave (Sell)</h4>
+        <p>Mode: Sell</p>
+        <p>Price: $100</p>
+        <p>Location: 134 Drive, City</p>
+        <p>Microwave in good working condition.</p>
+    </div>
+    <div class="item">
+        <img src="stable.jpg" alt="Table">
+        <h4>Table (Sell)</h4>
+        <p>Mode: Sell</p>
+        <p>Price: $75</p>
+        <p>Location: 145 Road, City</p>
+        <p>Solid wooden table for office use.</p>
+    </div>
+    <div class="item">
+        <img src="sheadphones.jpg" alt="Headphones">
+        <h4>Headphones (Rent)</h4>
+        <p>Mode: Rent</p>
+        <p>Rent: $5/day</p>
+        <p>Location: 157 Street, City</p>
+        <p>High-quality headphones for music lovers.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Unused Items. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

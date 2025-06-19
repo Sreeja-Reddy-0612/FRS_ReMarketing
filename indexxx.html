@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unused Items Exchange</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #2874f0;
+            color: white;
+            padding: 5px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo img {
+            height: 50px;
+        }
+        h3 {
+            margin: 0;
+            flex-grow: 1;
+            text-align: left;
+        }
+        .search-bar {
+            padding: 8px;
+            width: 600px;
+            height: 35px;
+            margin-left: -150px;
+        }
+        .user-options {
+            display: none;
+            position: absolute;
+            right: 30px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        .user-options p {
+            margin: 10px;
+            cursor: pointer;
+        }
+        .user-options p:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="icon.png" alt="Website Icon">
+    </div>
+    <h3>Unused Items Exchange</h3>
+    <input type="text" placeholder="Search items..." class="search-bar">
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><img src="login-removebg.png" alt="Profile Icon" width="30" height="30"><a href="login.html">Login</a></li>
+            <li><img src="saleee-removebg-preview.png" alt="Sales Icon" width="20" height="24"><a href="#sales">Sales</a></li>
+            <li class="cart-icon"><img src="cart-removebg-preview.png" alt="Cart Icon" width="30" height="30"><a href="#cart">Cart</a></li>
+        </ul>
+    </nav>
+    <div id="userGreeting"></div>
+    <div class='user-options' id='userOptions'>
+        <p id='phoneOption'>Phone Number: </p>
+        <p id='emailOption'>Email ID: </p>
+        <p id='logoutOption'>Logout</p>
+    </div>
+</header>
+
+<script>
+// Display user name if available
+const userName = localStorage.getItem('userName');
+const phoneNumber = localStorage.getItem('userPhone');
+const email = localStorage.getItem('userEmail');
+
+if (userName) {
+    document.getElementById('userGreeting').innerText = `Hello, ${userName}`;
+    document.getElementById('phoneOption').innerText = `Phone: ${phoneNumber}`;
+    document.getElementById('emailOption').innerText = `Email: ${email}`;
+}
+
+// Show/hide user options on click
+document.getElementById('userGreeting').onclick = function() {
+   const options = document.getElementById('userOptions');
+   options.style.display = options.style.display === 'block' ? 'none' : 'block';
+};
+
+// Logout functionality
+document.getElementById('logoutOption').onclick = function() {
+   localStorage.removeItem('userName');
+   localStorage.removeItem('userPhone');
+   localStorage.removeItem('userEmail');
+   document.getElementById('userGreeting').innerText = '';
+   alert('You have logged out successfully!');
+};
+</script>
+
+<main>
+    <!-- Categories Section -->
+    <div class="categories">
+        <div class="category">
+            <img src="clothslider.jpg" alt="Clothes" width="80" height="80">
+            <p><a href="clothes.html" style="text-decoration: none; color: inherit;">Clothes</a></p>
+        </div>
+        
+    
+    <div class="category">
+        <img src="boo.jpg" alt="Books" width="80" height="80">
+        <p><a href="book.html" style="text-decoration: none; color: inherit;">Books</a></p>
+    </div>
+    <div class="category">
+       <img src="jewel.jpg" alt="Jewelry" width="80" height="80">
+       <p><a href="jewel.html" style="text-decoration: none; color: inherit;">Jewellery</a></p>
+    </div>
+   <div class="category">
+       <img src="electronic.jpg" alt="Electronic" width="80" height="80">
+       <p>Electronic</p>
+   </div>
+   <div class="category">
+       <img src="laptop.jpg" alt="Mobile & Laptop" width="80" height="80">
+       <p><a href="laptop.html" style="text-decoration: none; color: inherit;">Mobile & laptop</a></p>
+    </div>
+    <div class="category">
+        <img src="food.jpg" alt="Food" width="80" height="80">
+        <p><a href="Food.html" style="text-decoration: none; color: inherit;">Food</a></p>
+
+    </div>
+    <div class="category">
+        <img src="bikecar.jpg" alt="Emergency" width="80" height="80">
+        <p><a href="bikecar.html" style="text-decoration: none; color: inherit;">Bike & Car</a></p>
+     </div>
+    <div class="category">
+        <img src="beauty.jpg" alt="Beauty" width="80" height="80">
+
+                   <p><a href="beauty.html" style="text-decoration: none; color: inherit;">Beauty</a></p>
+
+    </div>
+    <div class="category">
+        <img src="emerge.jpg" alt="Emergency" width="80" height="80">
+        <p><a href="emergency.html" style="text-decoration: none; color: inherit;">Emergency</a></p>
+     </div></div>
+</main>
+
+<footer>
+    <p>&copy ;2025 Unused Items Exchange. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

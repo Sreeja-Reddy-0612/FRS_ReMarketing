@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #2874f0;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .product img {
+            width: 120px;
+            height: 120px;
+            border-radius: 5px;
+        }
+        .product-details {
+            flex-grow: 1;
+            margin-left: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .product-details span {
+            display: inline-block;
+        }
+        .rating {
+            display: flex;
+            gap: 10px;
+        }
+        .actions {
+            text-align: center;
+        }
+        .actions a {
+            display: inline-block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #2874f0;
+            font-size: 14px;
+        }
+        header {
+    background-color: #2874f0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header .search-bar {
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+header .search-bar input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+header .sort-options {
+    display: flex;
+    align-items: center;
+}
+
+header .sort-options label {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+header .sort-options select {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Beauty Products</h1>
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <span>Beauty Store</span>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for beauty products...">
+    </div>
+    <div class="sort-options">
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+            <option value="amount">Amount</option>
+            <option value="latest">Latest Update</option>
+        </select>
+    </div>
+</header>
+
+<main>
+   
+    <!-- Products List -->
+    <div id="productList">
+        <!-- Product Examples -->
+        <div class="product" data-amount="500" data-date="2025-01-12">
+            <img src="bserum.jpg" alt="Beauty Product 1">
+            <div class="product-details">
+                <span><strong> Item Name:</strong> Anti-Aging Serum</span>
+                <span><strong> Place:</strong> Banjara Hills</span>
+                <span><strong> Form of Giving:</strong> Sell</span>
+                <span><strong> Price:</strong> ₹500</span>
+                <div class="rating">
+                    <label> Buyer Rating:</label><input type="number" min="1" max="5">
+                    <label> Seller Rating:</label><input type="number" min="1" max="5">
+                </div>
+            </div>
+            <div class="actions">
+                <a href="tel:+9123456789">📞 Phone</a>
+                <a href="#message">📩 Message</a>
+            </div>
+        </div>
+
+        <div class="product" data-amount="300" data-date="2025-01-10">
+            <img src="bmask.jpg" alt="Beauty Product 2">
+            <div class="product-details">
+                <span><strong> Item Name:</strong> Face Mask</span>
+                <span><strong> Place:</strong> Jubilee Hills</span>
+                <span><strong> Form of Giving:</strong> Rent</span>
+                <span><strong> Price:</strong> ₹300</span>
+                <div class="rating">
+                    <label> Buyer Rating:</label><input type="number" min="1" max="5">
+                    <label> Seller Rating:</label><input type="number" min="1" max="5">
+                </div>
+            </div>
+            <div class="actions">
+                <a href="tel:+9123456790">📞 Phone</a>
+                <a href="#message">📩 Message</a>
+            </div>
+        </div>
+
+        <div class="product" data-amount="0" data-date="2025-01-08">
+            <img src="bbalm.jpg" alt="Beauty Product 3">
+            <div class="product-details">
+                <span><strong> Item Name:</strong> Lip Balm</span>
+                <span><strong> Place:</strong> Gachibowli</span>
+                <span><strong> Form of Giving:</strong> Free</span>
+                <span><strong> Price:</strong> Free</span>
+                <div class="rating">
+                    <label> Buyer Rating:</label><input type="number" min="1" max="5">
+                    <label> Seller Rating:</label><input type="number" min="1" max="5">
+                </div>
+            </div>
+            <div class="actions">
+                <a href="tel:+9123456782">📞 Phone</a>
+                <a href="#message">📩 Message</a>
+            </div>
+        </div>
+
+        <div class="product" data-amount="1200" data-date="2025-01-15">
+            <img src="boil.jpg" alt="Beauty Product 4">
+            <div class="product-details">
+                <span><strong> Item Name:</strong> Hair Growth Oil</span>
+                <span><strong> Place:</strong> Hi-Tech City</span>
+                <span><strong> Form of Giving:</strong> Sell</span>
+                <span><strong> Price:</strong> ₹1200</span>
+                <div class="rating">
+                    <label> Buyer Rating:</label><input type="number" min="1" max="5">
+                    <label> Seller Rating:</label><input type="number" min="1" max="5">
+                </div>
+            </div>
+            <div class="actions">
+                <a href="tel:+9123456783">📞 Phone</a>
+                <a href="#message">📩 Message</a>
+            </div>
+        </div>
+
+        <div class="product" data-amount="0" data-date="2025-01-11">
+            <img src="bmoist.jpg" alt="Beauty Product 5">
+            <div class="product-details">
+                <span><strong> Item Name:</strong> Moisturizer</span>
+                <span><strong> Place:</strong> Kondapur</span>
+                <span><strong> Form of Giving:</strong> Free</span>
+                <span><strong> Price:</strong> Free</span>
+                <div class="rating">
+                    <label> Buyer Rating:</label><input type="number" min="1" max="5">
+                    <label> Seller Rating:</label><input type="number" min="1" max="5">
+                </div>
+            </div>
+            <div class="actions">
+                <a href="tel:+9123456784">📞 Phone</a>
+                <a href="#message">📩 Message</a>
+            </div>
+        </div>
+        
+    </div>
+</main>
+
+<script>
+    const products = document.querySelectorAll('.product');
+    const sortDropdown = document.getElementById('sort');
+
+    sortDropdown.addEventListener('change', () => {
+        const sortBy = sortDropdown.value;
+        const productList = document.getElementById('productList');
+        const sortedProducts = Array.from(products).sort((a, b) => {
+            if (sortBy === 'amount') {
+                return +a.dataset.amount - +b.dataset.amount;
+            } else if (sortBy === 'latest') {
+                return new Date(b.dataset.date) - new Date(a.dataset.date);
+            }
+        });
+        productList.innerHTML = '';
+        sortedProducts.forEach(product => productList.appendChild(product));
+    });
+</script>
+
+</body>
+</html>
